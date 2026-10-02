@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Grace Angela — Design Portfolio</title>
+<meta name="description" content="Design work by Grace Angela: accessible visual aids, product and web design, and video.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Grace Angela — Design Portfolio">
+<meta property="og:description" content="Design work by Grace Angela: accessible visual aids, product and web design, and video.">
+<meta name="theme-color" content="#2f48c8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2714%27%20fill%3D%27%232f48c8%27/%3E%3Ctext%20x%3D%2732%27%20y%3D%2742%27%20font-family%3D%27Arial%2Csans-serif%27%20font-weight%3D%27700%27%20font-size%3D%2726%27%20text-anchor%3D%27middle%27%20fill%3D%27%23ffffff%27%3EGA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Mono:wght@400;500&display=swap">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<style id="css">/* Layout: sticky nav; a split hero (big statement left, a 2×2 mosaic of project covers right); full-width project spreads
+   that alternate sides, each with an illustrated cover in one of two inks (cobalt, marigold) until real photos are added. */
+:root {
+  --bg: #f5f4f8;
+  --paper: #ffffff;
+  --ink: #1d1829;
+  --muted: #686277;
+  --line: #e2e0ea;
+  --blue: #2f48c8;
+  --blue-soft: #e4e8fb;
+  --gold: #e99f12;
+  --gold-soft: #fcefd2;
+  --display: "Bricolage Grotesque", "Arial Black", system-ui, sans-serif;
+  --body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "DM Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131119; --paper: #1d1a26; --ink: #efedf5; --muted: #aaa4b9; --line: #2e2a3b;
+    --blue: #8a9cff; --blue-soft: #222546; --gold: #f4b844; --gold-soft: #372c17; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #131119; --paper: #1d1a26; --ink: #efedf5; --muted: #aaa4b9; --line: #2e2a3b;
+  --blue: #8a9cff; --blue-soft: #222546; --gold: #f4b844; --gold-soft: #372c17; color-scheme: dark;
+}
+html { scroll-behavior: smooth; scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 76px); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--blue); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, [contenteditable]:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 4px; }
+.shell { max-width: 1200px; margin: 0 auto; padding-inline: 32px; }
+.mono { font-family: var(--mono); font-size: 13px; letter-spacing: 0.02em; }
+
+/* nav */
+.topnav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px); border-bottom: 1px solid var(--line); }
+.nav-in { display: flex; align-items: center; gap: 28px; height: 62px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-family: var(--display); font-weight: 700; font-size: 19px; color: var(--ink); text-decoration: none; margin-right: auto; white-space: nowrap; letter-spacing: -0.01em; }
+.brand i { width: 14px; height: 14px; border-radius: 50%; background: var(--blue); box-shadow: 6px 0 0 var(--gold); margin-right: 6px; }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { color: var(--muted); text-decoration: none; font-size: 15px; }
+.nav-links a:hover { color: var(--ink); }
+.btn { display: inline-flex; align-items: center; gap: 8px; font: 700 14.5px var(--body); padding: 9px 16px; border-radius: 999px; text-decoration: none; border: 1.5px solid var(--ink); color: var(--ink); background: transparent; cursor: pointer; white-space: nowrap; transition: background .15s, color .15s; }
+.btn:hover { background: var(--ink); color: var(--bg); }
+
+/* hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 64px; align-items: center; padding-block: 72px 24px; }
+.hero-text { display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+.who { display: flex; align-items: center; gap: 14px; }
+.sticker { width: 56px; height: 56px; flex: none; border-radius: 50%; overflow: hidden; background: var(--blue); color: var(--paper); display: grid; place-items: center; font-family: var(--display); font-weight: 700; font-size: 20px; box-shadow: 3px 3px 0 var(--gold); }
+.sticker img { width: 100%; height: 100%; object-fit: cover; }
+.who-t { display: flex; flex-direction: column; gap: 0; line-height: 1.3; }
+.who-n { font-weight: 700; font-size: 17px; }
+.who-r { color: var(--muted); font-size: 14.5px; }
+.tag { font-family: var(--display); font-weight: 800; font-size: clamp(42px, 5.6vw, 76px); line-height: 0.98; letter-spacing: -0.035em; margin: 0; text-wrap: balance; font-variation-settings: "opsz" 96; }
+.tag-mark { color: var(--blue); }
+.intro { margin: 0; max-width: 34em; font-size: 19px; color: var(--muted); white-space: pre-line; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.mailchip { display: inline-flex; align-items: center; gap: 10px; padding: 6px 6px 6px 16px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); font-size: 15px; min-width: 0; overflow-wrap: anywhere; }
+.copy { font: 500 12.5px var(--mono); color: var(--paper); background: var(--blue); border: 0; border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+
+.mosaic { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; min-width: 0; }
+.mosaic a { display: block; border-radius: 16px; overflow: hidden; transition: transform .25s ease; }
+.mosaic a:nth-child(2) { transform: translateY(28px); }
+.mosaic a:nth-child(4) { transform: translateY(28px); }
+.mosaic a:hover { transform: translateY(-4px); }
+.mosaic a:nth-child(2):hover, .mosaic a:nth-child(4):hover { transform: translateY(24px); }
+.mosaic .art { aspect-ratio: 1 / 1; border-radius: 16px; }
+.mosaic img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
+
+/* art covers */
+.art { position: relative; width: 100%; max-width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background-color: var(--tint); background-image: radial-gradient(circle, color-mix(in srgb, var(--dot) 30%, transparent) 1.3px, transparent 1.8px); background-size: 15px 15px; }
+.art svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.tone-0 { --tint: var(--blue-soft); --dot: var(--blue); }
+.tone-1 { --tint: var(--gold-soft); --dot: var(--gold); }
+.a-blue { fill: var(--blue); }
+.a-gold { fill: var(--gold); }
+.a-ink { fill: var(--ink); }
+.a-paper { fill: var(--paper); }
+.a-out { fill: var(--paper); stroke: var(--ink); stroke-width: 2.5; }
+.a-line { fill: var(--line); }
+.a-mute { fill: var(--muted); opacity: 0.35; }
+.a-stroke { fill: none; stroke: var(--ink); stroke-width: 2; stroke-linecap: round; }
+.a-txt { font: 500 12px var(--mono); fill: var(--ink); }
+.a-txt-p { font: 500 12px var(--mono); fill: var(--paper); }
+
+/* section heads */
+.sec { padding-block: 120px 0; }
+.sh { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 12px 32px; margin: 0 0 56px; }
+.sh .k { font-family: var(--mono); font-size: 13px; color: var(--blue); margin: 0 0 10px; }
+.sh h2 { font-family: var(--display); font-weight: 800; font-size: clamp(34px, 4.4vw, 56px); letter-spacing: -0.03em; line-height: 1; margin: 0; }
+.sh .sub { color: var(--muted); max-width: 26em; margin: 0; }
+
+/* projects */
+.projects { display: flex; flex-direction: column; gap: 112px; }
+.proj { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 64px; align-items: center; scroll-margin-top: 90px; }
+.proj.flip .media { order: 2; }
+.media { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); min-width: 0; }
+.media .art, .media figure:first-child { grid-column: 1 / -1; }
+.media .art { border-radius: 20px; }
+.media figure { margin: 0; position: relative; min-width: 0; }
+.media img { display: block; width: 100%; height: auto; border-radius: 14px; background: var(--paper); }
+.media figure:first-child img { aspect-ratio: 4 / 3; object-fit: cover; border-radius: 20px; }
+.media figure:not(:first-child) img { aspect-ratio: 1 / 1; object-fit: cover; }
+.media figcaption { font-family: var(--mono); font-size: 12.5px; color: var(--muted); margin-top: 8px; }
+.txt { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.kind { font-family: var(--mono); font-size: 13px; color: var(--blue); margin: 0; }
+.txt h3 { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 3.2vw, 42px); line-height: 1.02; letter-spacing: -0.03em; margin: 0; text-wrap: balance; }
+.txt .body { margin: 0; white-space: pre-line; font-size: 17.5px; }
+.meta { margin: 8px 0 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px 22px; border-top: 1px solid var(--line); padding-top: 18px; font-size: 15.5px; }
+.meta dt { font-family: var(--mono); font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; padding-top: 3px; }
+.meta dd { margin: 0; min-width: 0; }
+
+/* toolkit */
+.kit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.kit > div { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 28px; min-width: 0; }
+.kit h3 { font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: -0.01em; margin: 0 0 14px; }
+.sw { list-style: none; margin: 0; padding: 0; }
+.sw li { display: flex; align-items: center; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 16px; }
+.sw li:last-child { border-bottom: 0; }
+.sw li::before { content: ""; flex: none; width: 12px; height: 12px; border-radius: 50%; background: var(--blue); }
+.sw li:nth-child(even)::before { background: var(--gold); }
+
+/* approach */
+.ways { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
+.way { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.glyph { width: 44px; height: 44px; margin-bottom: 8px; }
+.way h3 { font-family: var(--display); font-weight: 700; font-size: 23px; line-height: 1.15; margin: 0; letter-spacing: -0.015em; }
+.way p { margin: 0; color: var(--muted); white-space: pre-line; }
+.learn-h { font-family: var(--mono); font-size: 13px; color: var(--muted); margin: 64px 0 14px; }
+.learn { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.learn li { background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 8px 18px; font-size: 15px; display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+.learn .lm { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+
+/* contact */
+.say { margin-top: 128px; background: var(--blue); color: var(--paper); border-radius: 28px; padding: 64px; display: flex; flex-direction: column; gap: 22px; position: relative; overflow: hidden; }
+.say::before { content: ""; position: absolute; width: 340px; aspect-ratio: 1; border-radius: 50%; right: -90px; top: -120px; background: var(--gold); }
+.say::after { content: ""; position: absolute; width: 180px; aspect-ratio: 1; border-radius: 50%; right: 150px; bottom: -110px; border: 2px solid color-mix(in srgb, var(--paper) 40%, transparent); }
+.say > * { position: relative; z-index: 1; }
+.say .k { font-family: var(--mono); font-size: 13px; margin: 0; opacity: 0.8; }
+.say h2 { font-family: var(--display); font-weight: 800; font-size: clamp(40px, 7vw, 88px); line-height: 0.95; letter-spacing: -0.04em; margin: 0; max-width: 9em; }
+.say .row { display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: center; }
+.say .mailchip { background: var(--paper); color: var(--ink); border: 0; }
+.say .btn { border-color: var(--paper); color: var(--paper); }
+.say .btn:hover { background: var(--paper); color: var(--blue); }
+.say .loc { opacity: 0.8; font-size: 15px; }
+.foot { color: var(--muted); font-size: 14px; padding-block: 28px 56px; display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
+
+/* edit mode */
+[contenteditable] { outline: 1px dashed color-mix(in srgb, var(--blue) 60%, transparent); outline-offset: 3px; border-radius: 2px; cursor: text; min-width: 2ch; }
+[contenteditable]:empty::before { content: attr(data-ph); color: var(--muted); opacity: 0.7; }
+[contenteditable]:focus { outline: 2px solid var(--blue); background: color-mix(in srgb, var(--gold) 16%, transparent); }
+.say [contenteditable] { outline-color: var(--paper); }
+.ed-ctl { font: 500 12px var(--mono); color: var(--blue); background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 4px 9px; cursor: pointer; }
+.ed-ctl:hover { border-color: var(--blue); }
+.ed-add { align-self: flex-start; margin-top: 14px; }
+.ed-row { display: inline-flex; gap: 4px; flex-wrap: wrap; }
+.ed-line { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.ed-hint { font-family: var(--mono); font-size: 11.5px; color: var(--muted); margin: 2px 0 0; }
+.ed-field { display: flex; flex-direction: column; gap: 2px; }
+.ed-field small { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.img-ctl { position: absolute; top: 10px; right: 10px; display: flex; gap: 4px; z-index: 2; }
+.has-bar body { padding-bottom: 76px; }
+.editbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding: 12px 20px calc(12px + env(safe-area-inset-bottom, 0px)); background: var(--paper); border-top: 1px solid var(--line); box-shadow: 0 -6px 24px rgb(0 0 0 / 0.08); font-family: var(--body); font-size: 14.5px; }
+.eb-who { font-family: var(--mono); font-size: 11.5px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.eb-status { flex: 1 1 200px; color: var(--muted); min-width: 0; }
+.editbar button { font: 700 14px var(--body); padding: 8px 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); cursor: pointer; }
+.editbar .eb-primary { background: var(--blue); border-color: var(--blue); color: var(--paper); }
+.editbar button:disabled { opacity: 0.45; cursor: default; }
+
+@media (max-width: 980px) {
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 48px; padding-block: 48px 24px; }
+  .mosaic a:nth-child(2), .mosaic a:nth-child(4) { transform: none; }
+  .mosaic a:nth-child(2):hover, .mosaic a:nth-child(4):hover { transform: translateY(-4px); }
+  .proj { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .proj.flip .media { order: 0; }
+  .kit, .ways { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .ways { gap: 36px; }
+  .say { padding: 44px 32px; }
+}
+@media (max-width: 640px) {
+  .shell { padding-inline: 16px; }
+  .nav-links { display: none; }
+  .nav-in { gap: 12px; }
+  .btn { padding: 8px 13px; font-size: 13.5px; }
+  .sec { padding-block: 88px 0; }
+  .projects { gap: 80px; }
+  .intro { font-size: 17.5px; }
+  .mosaic { gap: 10px; }
+  .say { padding: 36px 22px; border-radius: 22px; margin-top: 96px; }
+  .say::before { width: 220px; right: -90px; top: -90px; }
+}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="application/json" id="state">{"name":"Grace Angela","tagline":"Design that makes information","intro":"I’m a software developer at IBM, and I’ve been designing for as long as I’ve been coding: websites and interfaces, visual aids that help people communicate, and video. Here are a few projects.","photo":"","email":"angela.abrahamlincoln@gmail.com","linkedin":"https://www.linkedin.com/in/angela-grace","location":"Kochi, India","otherLabel":"Engineering portfolio","otherUrl":"../","sayTitle":"Let’s make something useful.","projects":[{"title":"Visual communication cards","kind":"Accessibility · Visual design","context":"IBM volunteering","role":"Designer","tools":"","text":"A set of picture cards for neurodivergent children who find verbal communication hard. Each card gives a child a simple visual way to show what they need or how they feel, so they can be understood by the people around them.","images":[],"art":"cards"},{"title":"Data annotation & visualisation tool","kind":"Product design · Team project","context":"IBM Developer Jumpstart Tech Challenge, 3 months","role":"Co-designer and developer","tools":"Enterprise Design Thinking","text":"Our team built a tool for annotating business documents and visualising the results. I worked on understanding the people who would use it and turning that into a clear, accessible interface. The project won the People’s Choice Award.","images":[],"art":"annotate"},{"title":"University website","kind":"Web design · Front-end build","context":"College project","role":"Designer and developer","tools":"HTML, CSS, JavaScript","text":"A responsive, multi-page website for the university. I planned the information architecture and navigation, set the visual hierarchy, and built it to work well on phones.","images":[],"art":"web"},{"title":"Video & content","kind":"Video editing · Social media","context":"Internships","role":"Video editor, content writer, social media manager","tools":"Adobe Premiere Pro, DaVinci Resolve, Canva","text":"Video creation and editing at Pinaki Content Solutions, social media management and content writing at Lurnweb Academy, and content writing at Synergy Eduservices.","images":[],"art":"video"}],"kit":[{"name":"Design","items":"Figma, Adobe XD, Adobe Photoshop, Adobe Illustrator, Canva"},{"name":"Video","items":"Adobe Premiere Pro, DaVinci Resolve"},{"name":"Front end","items":"HTML, CSS, JavaScript, Angular, PHP"}],"ways":[{"title":"Start with the person","text":"I use Enterprise Design Thinking to understand who something is for and what they’re struggling with before I decide what to make."},{"title":"Make it easy to read","text":"Clear hierarchy, plain words and layouts that work on a phone as well as a laptop."},{"title":"Build what I design","text":"As a developer I can take a design from wireframe and prototype to working, responsive code."}],"learn":[{"name":"Enterprise Design Thinking Practitioner","meta":"IBM"},{"name":"UI / UX Design","meta":"Internshala, 2023"},{"name":"Web Development: HTML & CSS","meta":"Inmovidu, 2020"},{"name":"Full Stack Development in Java","meta":"Shiash Info Solutions, 2023"}],"roleLine":"Designer & software developer","tagAccent":"easier to use.","workSub":"Interfaces, accessible visuals, websites and video, from volunteering, IBM and my studies.","kitSub":"The tools I design, prototype, edit and build with."}</script>
+<script id="app">var SITE_HEAD = "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1,viewport-fit=cover\">\n<title>Grace Angela \u2014 Design Portfolio</title>\n<meta name=\"description\" content=\"Design work by Grace Angela: accessible visual aids, product and web design, and video.\">\n<meta property=\"og:type\" content=\"website\">\n<meta property=\"og:title\" content=\"Grace Angela \u2014 Design Portfolio\">\n<meta property=\"og:description\" content=\"Design work by Grace Angela: accessible visual aids, product and web design, and video.\">\n<meta name=\"theme-color\" content=\"#2f48c8\">\n<link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2714%27%20fill%3D%27%232f48c8%27/%3E%3Ctext%20x%3D%2732%27%20y%3D%2742%27%20font-family%3D%27Arial%2Csans-serif%27%20font-weight%3D%27700%27%20font-size%3D%2726%27%20text-anchor%3D%27middle%27%20fill%3D%27%23ffffff%27%3EGA%3C/text%3E%3C/svg%3E\">\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Mono:wght@400;500&display=swap\">\n<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>\n";
+var SITE_PATH = "design/index.html";
+var PRE = "";
+var RESET = "";
+var DRAFT_KEY = 'ga-design-draft';
+var TPL = {
+  project: { title: '', kind: '', context: '', role: '', tools: '', text: '', art: 'shapes', images: [] },
+  kit: { name: '', items: '' },
+  way: { title: '', text: '' },
+  learn: { name: '', meta: '' }
+};
+var ARTS = ['cards', 'annotate', 'web', 'video', 'shapes'];
+function href(u) { u = String(u || '').trim(); if (!u) return ''; if (/^(https?:|mailto:|\/|\.|#)/i.test(u) || !/^[^\/\s]+\.[a-z]{2,}(\/|$)/i.test(u)) return u; return 'https://' + u; }
+function initials() { return esc(String(S.name || '').split(/\s+/).filter(Boolean).slice(0, 2).map(function (w) { return w[0]; }).join('').toUpperCase()); }
+function sh(id, k, title, subPath) { return '<div class="sh"><div><p class="k">' + k + '</p><h2 id="' + id + '-h">' + title + '</h2></div>' + (subPath ? T(subPath, 'p', 'sub', 'A line of context') : '') + '</div>'; }
+
+/* ---------- illustrated covers (shown until real photos are added) ---------- */
+function bars(x, y, ws, cls, gap, hgt) { return ws.map(function (w, i) { return '<rect class="' + cls + '" x="' + x + '" y="' + (y + i * gap) + '" width="' + w + '" height="' + (hgt || 7) + '" rx="3.5"/>'; }).join(''); }
+function artSvg(kind) {
+  var s = '<svg viewBox="0 0 400 300" aria-hidden="true" preserveAspectRatio="xMidYMid meet">';
+  if (kind === 'cards') {
+    var card = function (rot, dx, cls, inner) { return '<g transform="translate(' + (200 + dx) + ' 158) rotate(' + rot + ')"><rect class="' + cls + '" x="-62" y="-84" width="124" height="168" rx="16"/>' + inner + '</g>'; };
+    s += card(-15, -84, 'a-gold', '<circle class="a-paper" cx="0" cy="-22" r="30"/><circle class="a-ink" cx="-10" cy="-28" r="3.5"/><circle class="a-ink" cx="10" cy="-28" r="3.5"/><path class="a-stroke" d="M-12 -14 Q0 -4 12 -14"/>' + bars(-34, 34, [68, 44], 'a-paper', 16, 8));
+    s += card(14, 84, 'a-blue', '<path class="a-paper" d="M0 -6 C-6 -22 -30 -22 -30 -40 C-30 -54 -12 -60 0 -46 C12 -60 30 -54 30 -40 C30 -22 6 -22 0 -6Z"/>' + bars(-34, 34, [68, 40], 'a-paper', 16, 8));
+    s += card(0, 0, 'a-out', '<rect class="a-blue" x="-24" y="-52" width="48" height="40" rx="6"/><path class="a-stroke" d="M24 -42 q16 0 16 12 q0 12 -16 12"/><rect class="a-gold" x="-30" y="-12" width="60" height="6" rx="3"/>' + bars(-34, 34, [68, 50], 'a-line', 16, 8));
+  } else if (kind === 'annotate') {
+    s += '<rect class="a-out" x="56" y="34" width="190" height="236" rx="12"/>';
+    s += '<rect class="a-gold" x="74" y="84" width="118" height="14" rx="3" opacity="0.75"/><rect class="a-blue" x="74" y="174" width="90" height="14" rx="3" opacity="0.45"/>';
+    s += bars(80, 58, [130, 104, 140, 120, 96, 136, 112, 78, 126, 100], 'a-mute', 22, 6);
+    s += '<path class="a-stroke" d="M192 91 H262"/><path class="a-stroke" d="M164 181 H262"/>';
+    s += '<rect class="a-gold" x="262" y="78" width="96" height="26" rx="13"/><text class="a-txt" x="310" y="95" text-anchor="middle">entity</text>';
+    s += '<rect class="a-blue" x="262" y="168" width="96" height="26" rx="13"/><text class="a-txt-p" x="310" y="185" text-anchor="middle">date</text>';
+    s += '<rect class="a-paper" x="270" y="212" width="96" height="58" rx="10"/><rect class="a-blue" x="284" y="246" width="12" height="14" rx="2"/><rect class="a-gold" x="302" y="232" width="12" height="28" rx="2"/><rect class="a-blue" x="320" y="238" width="12" height="22" rx="2"/><rect class="a-ink" x="338" y="226" width="12" height="34" rx="2"/>';
+  } else if (kind === 'web') {
+    s += '<rect class="a-out" x="34" y="40" width="270" height="206" rx="14"/><path class="a-stroke" d="M34 70 H304"/>';
+    s += '<circle class="a-gold" cx="52" cy="55" r="5"/><circle class="a-blue" cx="68" cy="55" r="5"/><circle class="a-ink" cx="84" cy="55" r="5"/>';
+    s += '<rect class="a-blue" x="52" y="86" width="234" height="64" rx="8"/>' + bars(66, 102, [110, 72], 'a-paper', 16, 8);
+    s += '<rect class="a-gold" x="52" y="164" width="70" height="62" rx="8"/><rect class="a-line" x="134" y="164" width="70" height="62" rx="8"/><rect class="a-line" x="216" y="164" width="70" height="62" rx="8"/>';
+    s += '<rect class="a-out" x="276" y="104" width="92" height="170" rx="18"/><rect class="a-blue" x="290" y="128" width="64" height="40" rx="6"/>' + bars(290, 180, [64, 48, 56, 40], 'a-mute', 16, 7) + '<rect class="a-ink" x="306" y="118" width="32" height="4" rx="2"/>';
+  } else if (kind === 'video') {
+    s += '<rect class="a-ink" x="58" y="30" width="284" height="160" rx="12"/><circle class="a-gold" cx="200" cy="110" r="30"/><path class="a-ink" d="M191 94 L216 110 L191 126 Z"/>';
+    s += '<rect class="a-out" x="58" y="204" width="284" height="72" rx="10"/>';
+    s += '<rect class="a-blue" x="70" y="216" width="84" height="20" rx="4"/><rect class="a-blue" x="160" y="216" width="56" height="20" rx="4"/><rect class="a-gold" x="222" y="216" width="108" height="20" rx="4"/>';
+    s += '<rect class="a-gold" x="70" y="244" width="120" height="20" rx="4" opacity="0.6"/><rect class="a-line" x="196" y="244" width="134" height="20" rx="4"/>';
+    s += '<rect class="a-ink" x="238" y="198" width="3" height="84" rx="1.5"/><path class="a-ink" d="M232 194 H247 L239.5 203 Z"/>';
+  } else {
+    s += '<circle class="a-blue" cx="160" cy="150" r="78"/><circle class="a-gold" cx="244" cy="128" r="58" opacity="0.92"/><rect class="a-out" x="214" y="170" width="92" height="92" rx="14"/>';
+  }
+  return s + '</svg>';
+}
+function cover(p, i, label) { return '<div class="art tone-' + (i % 2) + '" role="img" aria-label="' + esc(label || p.title) + '">' + artSvg(p.art) + '</div>'; }
+
+function media(p, i) {
+  var imgs = p.images || [], base = 'projects.' + i + '.images', h = '';
+  if (!imgs.length) h += cover(p, i, 'Illustration for ' + (p.title || 'project'));
+  imgs.forEach(function (im, j) {
+    h += '<figure><img src="' + esc(im.src) + '" alt="' + esc(im.cap || p.title) + '" loading="lazy">' +
+      (editing ? '<span class="img-ctl">' + (j > 0 ? ctl('up', base + '.' + j, '↑', ' aria-label="Move earlier"') : '') + ctl('del', base + '.' + j, 'Remove') + '</span>' : '') +
+      (editing || im.cap ? T(base + '.' + j + '.cap', 'figcaption', '', 'Caption (optional)', 1) : '') + '</figure>';
+  });
+  if (editing) {
+    h += '<div class="ed-line" style="grid-column:1/-1">' + ctl('img', base, imgs.length ? '+ Add more images' : '+ Add images') + '<span class="ed-hint">The first image is shown large</span></div>';
+    if (!imgs.length) h += '<div class="ed-line" style="grid-column:1/-1"><span class="ed-hint">Illustration:</span>' + ARTS.map(function (a) { return '<button type="button" class="ed-ctl" data-act="set" data-path="projects.' + i + '.art" data-val="' + a + '"' + (p.art === a ? ' aria-pressed="true" style="border-color:var(--blue)"' : '') + '>' + a + '</button>'; }).join('') + '</div>';
+  }
+  return '<div class="media">' + h + '</div>';
+}
+function metaRow(label, path) { return (has(path) || editing) ? '<dt>' + label + '</dt><dd>' + T(path, 'span', '', label, 1) + '</dd>' : ''; }
+function mail() {
+  if (editing) return '<span class="mailchip">' + T('email', 'span', 'copy-src', 'you@example.com', 1) + '</span>';
+  if (!has('email')) return '';
+  return '<span class="mailchip"><span class="copy-src">' + esc(S.email) + '</span><button type="button" class="copy" data-copy="' + esc(S.email) + '">Copy</button></span>';
+}
+function linkedin() {
+  if (editing) return '<span class="ed-field"><small>LinkedIn URL</small>' + T('linkedin', 'span', '', 'linkedin.com/in/…', 1) + '</span>';
+  return has('linkedin') ? '<a class="btn" href="' + esc(href(S.linkedin)) + '" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>' : '';
+}
+var GLYPHS = [
+  '<svg class="glyph" viewBox="0 0 44 44" aria-hidden="true"><circle class="a-blue" cx="22" cy="22" r="20"/><circle class="a-gold" cx="30" cy="14" r="8"/></svg>',
+  '<svg class="glyph" viewBox="0 0 44 44" aria-hidden="true"><rect class="a-gold" x="2" y="2" width="40" height="40" rx="10"/><rect class="a-paper" x="10" y="14" width="24" height="5" rx="2.5"/><rect class="a-paper" x="10" y="25" width="16" height="5" rx="2.5"/></svg>',
+  '<svg class="glyph" viewBox="0 0 44 44" aria-hidden="true"><path class="a-blue" d="M22 2 L42 40 H2 Z"/><circle class="a-gold" cx="22" cy="30" r="6"/></svg>'
+];
+
+function render() {
+  var h = '';
+  h += '<nav class="topnav" aria-label="Main"><div class="shell nav-in"><a class="brand" href="#top"><i aria-hidden="true"></i>' + esc(S.name) + '</a><div class="nav-links"><a href="#work">Work</a><a href="#toolkit">Toolkit</a><a href="#approach">Approach</a><a href="#contact">Contact</a></div>';
+  if (!editing && has('otherUrl')) h += '<a class="btn" href="' + esc(href(S.otherUrl)) + '" target="_blank" rel="noopener">' + esc(S.otherLabel || 'Engineering portfolio') + ' <span aria-hidden="true">↗</span></a>';
+  h += '</div></nav><div class="shell">';
+
+  /* hero */
+  h += '<header class="hero" id="top"><div class="hero-text">';
+  h += '<div class="who"><div class="sticker">' + (S.photo ? '<img src="' + esc(S.photo) + '" alt="Portrait of ' + esc(S.name) + '">' : '<span aria-hidden="true">' + initials() + '</span>') + '</div><div class="who-t">' + T('name', 'span', 'who-n', 'Your name', 1) + T('roleLine', 'span', 'who-r', 'What you do', 1) + '</div></div>';
+  if (editing) h += '<div class="ed-line">' + ctl('photo', 'photo', S.photo ? 'Change photo' : 'Add photo') + (S.photo ? ctl('clear', 'photo', 'Remove photo') : '') + '</div>';
+  h += '<h1 class="tag">' + T('tagline', 'span', '', 'Your headline', 1) + ' ' + T('tagAccent', 'span', 'tag-mark', 'highlighted words', 1) + '</h1>';
+  h += T('intro', 'p', 'intro', 'A short introduction');
+  h += '<div class="actions">' + mail() + linkedin() + '</div>';
+  if (editing) h += '<div class="ed-field"><small>Link to your engineering portfolio</small>' + T('otherLabel', 'span', '', 'Link text', 1) + T('otherUrl', 'span', '', 'https://…', 1) + '</div>';
+  h += '</div>';
+  h += '<div class="mosaic" aria-label="Project previews">' + S.projects.slice(0, 4).map(function (p, i) {
+    var inner = (p.images && p.images.length) ? '<img src="' + esc(p.images[0].src) + '" alt="">' : '<div class="art tone-' + (i % 2) + '">' + artSvg(p.art) + '</div>';
+    return '<a href="#p-' + i + '" aria-label="' + esc(p.title) + '">' + inner + '</a>';
+  }).join('') + '</div>';
+  h += '</header>';
+
+  /* projects */
+  h += '<section class="sec" id="work" aria-labelledby="work-h">' + sh('work', S.projects.length + ' selected projects', 'Selected work', 'workSub') + '<div class="projects">';
+  h += S.projects.map(function (p, i) {
+    var b = 'projects.' + i;
+    return '<article class="proj' + (i % 2 ? ' flip' : '') + '" id="p-' + i + '">' + media(p, i) +
+      '<div class="txt">' + T(b + '.kind', 'p', 'kind', 'Discipline · type', 1) + T(b + '.title', 'h3', '', 'Project title', 1) + T(b + '.text', 'p', 'body', 'What it was, who it was for, what you did') +
+      '<dl class="meta">' + metaRow('Context', b + '.context') + metaRow('Role', b + '.role') + metaRow('Tools', b + '.tools') + '</dl>' +
+      (editing ? '<div class="ed-line">' + rowCtl('projects', i, S.projects.length) + '</div>' : '') + '</div></article>';
+  }).join('');
+  h += '</div>' + addCtl('projects', 'project', 'Add a project') + '</section>';
+
+  /* toolkit */
+  h += '<section class="sec" id="toolkit" aria-labelledby="toolkit-h">' + sh('toolkit', 'What I work with', 'Toolkit', 'kitSub') + '<div class="kit">';
+  h += S.kit.map(function (g, i) {
+    var p = 'kit.' + i + '.items';
+    return '<div>' + T('kit.' + i + '.name', 'h3', '', 'Group', 1) + (editing ? T(p, 'p', '', 'Comma-separated list') + hint('Separate items with commas') : '<ul class="sw">' + list(g.items).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>') + rowCtl('kit', i, S.kit.length) + '</div>';
+  }).join('');
+  h += '</div>' + addCtl('kit', 'kit', 'Add a tool group') + '</section>';
+
+  /* approach */
+  h += '<section class="sec" id="approach" aria-labelledby="approach-h">' + sh('approach', 'Approach', 'How I work', '') + '<div class="ways">';
+  h += S.ways.map(function (w, i) { return '<div class="way">' + GLYPHS[i % 3] + T('ways.' + i + '.title', 'h3', '', 'Principle', 1) + T('ways.' + i + '.text', 'p', '', 'What it means in practice') + rowCtl('ways', i, S.ways.length) + '</div>'; }).join('');
+  h += '</div>' + addCtl('ways', 'way', 'Add a principle');
+  h += '<p class="learn-h">Design training</p><ul class="learn">' + S.learn.map(function (l, i) { return '<li>' + T('learn.' + i + '.name', 'span', '', 'Course', 1) + T('learn.' + i + '.meta', 'span', 'lm', 'Issuer, year', 1) + rowCtl('learn', i, S.learn.length) + '</li>'; }).join('') + '</ul>';
+  h += addCtl('learn', 'learn', 'Add training') + '</section>';
+
+  /* contact */
+  h += '<section class="say" id="contact" aria-labelledby="contact-h"><p class="k">Contact</p>' + T('sayTitle', 'h2', '', 'Say hello', 1).replace('<h2 ', '<h2 id="contact-h" ');
+  h += '<div class="row">' + mail() + linkedin() + T('location', 'span', 'loc', 'City, country', 1) + '</div></section>';
+  h += '<footer class="foot"><span>' + esc(S.name) + '</span><span>' + esc(S.roleLine || '') + '</span></footer>';
+  h += '</div>';
+  return h;
+}
+
+/* ---- shared edit engine: state lives in #state, page renders from it, owner can edit and republish ---- */
+var STATE_TEXT = document.getElementById('state').textContent;
+var S = JSON.parse(STATE_TEXT);
+var editing = false, dirty = false, art = null, draft = null;
+var IS_SITE = typeof SITE_HEAD !== 'undefined';
+if (typeof SITE_PATH === 'undefined') var SITE_PATH = '';
+var CE = (function () { var d = document.createElement('div'); try { d.contentEditable = 'plaintext-only'; } catch (e) {} return d.contentEditable === 'plaintext-only' ? 'plaintext-only' : 'true'; })();
+
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+function get(p) { return p.split('.').reduce(function (o, k) { return o == null ? o : o[k]; }, S); }
+function setP(p, v) { var ks = p.split('.'); var last = ks.pop(); var o = ks.reduce(function (o, k) { return o[k]; }, S); o[last] = v; }
+function has(p) { var v = get(p); return v != null && String(v).trim() !== ''; }
+function list(s) { return String(s || '').split(',').map(function (x) { return x.trim(); }).filter(Boolean); }
+
+/* editable text: T(path, tag, class, placeholder, singleLine) */
+function T(p, tag, cls, ph, single) {
+  tag = tag || 'span';
+  var v = get(p); v = v == null ? '' : v;
+  if (!editing && !String(v).trim()) return '';
+  var a = ' class="' + (cls || '') + '" data-path="' + p + '"';
+  if (editing) a += ' contenteditable="' + CE + '" spellcheck="true" data-ph="' + esc(ph || 'Add text') + '"' + (single ? ' data-single="1"' : '');
+  return '<' + tag + a + '>' + esc(v) + '</' + tag + '>';
+}
+/* edit-mode controls */
+function ctl(act, path, label, extra) { return editing ? '<button type="button" class="ed-ctl" data-act="' + act + '" data-path="' + path + '"' + (extra || '') + '>' + label + '</button>' : ''; }
+function rowCtl(arrPath, i, n) {
+  if (!editing) return '';
+  return '<span class="ed-row">' + (i > 0 ? ctl('up', arrPath + '.' + i, '↑', ' aria-label="Move up"') : '') + (i < n - 1 ? ctl('down', arrPath + '.' + i, '↓', ' aria-label="Move down"') : '') + ctl('del', arrPath + '.' + i, 'Remove') + '</span>';
+}
+function addCtl(arrPath, tpl, label) { return editing ? '<button type="button" class="ed-ctl ed-add" data-act="add" data-path="' + arrPath + '" data-tpl="' + tpl + '">+ ' + label + '</button>' : ''; }
+function hint(text) { return editing ? '<p class="ed-hint">' + text + '</p>' : ''; }
+
+function paint() { document.getElementById('root').innerHTML = render(); document.documentElement.classList.toggle('is-editing', editing); }
+
+function readImg(file) {
+  return new Promise(function (res, rej) {
+    var r = new FileReader();
+    r.onload = function () {
+      var im = new Image();
+      im.onload = function () {
+        var max = 1400, sc = Math.min(1, max / Math.max(im.width, im.height));
+        var c = document.createElement('canvas'); c.width = Math.round(im.width * sc); c.height = Math.round(im.height * sc);
+        var x = c.getContext('2d'); x.fillStyle = '#ffffff'; x.fillRect(0, 0, c.width, c.height); x.drawImage(im, 0, 0, c.width, c.height);
+        res(c.toDataURL('image/jpeg', 0.82));
+      };
+      im.onerror = rej; im.src = r.result;
+    };
+    r.onerror = rej; r.readAsDataURL(file);
+  });
+}
+
+/* ---- events ---- */
+document.addEventListener('input', function (e) {
+  var el = e.target.closest && e.target.closest('[data-path][contenteditable]');
+  if (!el) return;
+  setP(el.dataset.path, el.innerText.replace(/ /g, ' ').replace(/\n{3,}/g, '\n\n').trim());
+  markDirty();
+});
+document.addEventListener('keydown', function (e) {
+  var el = e.target.closest && e.target.closest('[data-single]');
+  if (el && e.key === 'Enter') e.preventDefault();
+});
+document.addEventListener('paste', function (e) {
+  var el = e.target.closest && e.target.closest('[data-path][contenteditable]');
+  if (!el || CE === 'plaintext-only') return;
+  e.preventDefault();
+  var t = (e.clipboardData || window.clipboardData).getData('text');
+  document.execCommand('insertText', false, t);
+});
+document.addEventListener('click', function (e) {
+  var cp = e.target.closest('[data-copy]');
+  if (cp) { copyText(cp.getAttribute('data-copy'), cp); return; }
+  var b = e.target.closest('[data-act]');
+  if (!b || !editing) return;
+  var act = b.dataset.act, p = b.dataset.path;
+  if (act === 'add') { get(p).push(JSON.parse(JSON.stringify(TPL[b.dataset.tpl]))); }
+  else if (act === 'del' || act === 'up' || act === 'down') {
+    var ks = p.split('.'), i = +ks.pop(), arr = get(ks.join('.'));
+    if (act === 'del') arr.splice(i, 1);
+    else { var j = act === 'up' ? i - 1 : i + 1; var t = arr[i]; arr[i] = arr[j]; arr[j] = t; }
+  }
+  else if (act === 'toggle') { setP(p, !get(p)); }
+  else if (act === 'clear') { setP(p, ''); }
+  else if (act === 'set') { setP(p, b.dataset.val); }
+  else if (act === 'img' || act === 'photo') {
+    var inp = document.createElement('input'); inp.type = 'file'; inp.accept = 'image/*'; if (act === 'img') inp.multiple = true;
+    inp.onchange = function () {
+      var files = Array.prototype.slice.call(inp.files || []);
+      setStatus('Adding ' + (files.length > 1 ? files.length + ' images' : 'image') + '…');
+      Promise.all(files.map(readImg)).then(function (srcs) {
+        if (act === 'photo') setP(p, srcs[0] || '');
+        else srcs.forEach(function (s) { get(p).push({ src: s, cap: '' }); });
+        markDirty(); paint(); setStatus('Image added. Save to publish it.');
+      }).catch(function () { setStatus('That file couldn’t be read as an image. Try a JPG or PNG.'); });
+    };
+    inp.click(); return;
+  }
+  markDirty(); paint();
+});
+
+function copyText(t, btn) {
+  var done = function () { var o = btn.textContent; btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = o; }, 1600); };
+  try {
+    navigator.clipboard.writeText(t).then(done, function () { selectNear(btn); });
+  } catch (e) { selectNear(btn); }
+}
+function selectNear(btn) { var el = btn.parentNode.querySelector('.copy-src'); if (!el) return; var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+
+/* ---- edit bar ---- */
+var bar;
+function setStatus(t) { if (bar) bar.querySelector('.eb-status').textContent = t || ''; }
+function markDirty() { dirty = true; if (bar) bar.querySelector('[data-eb=save]').disabled = false; }
+function showBar() {
+  bar = document.createElement('div');
+  bar.className = 'editbar'; bar.setAttribute('role', 'toolbar'); bar.setAttribute('aria-label', 'Edit this page');
+  bar.innerHTML = '<span class="eb-who">' + (IS_SITE ? 'Edit mode · changes stay on this computer' : 'Only you see this bar') + '</span><span class="eb-status" aria-live="polite"></span>' +
+    '<button type="button" data-eb="restore" hidden>Restore unsaved edits</button>' +
+    '<button type="button" data-eb="cancel" hidden>Discard</button>' +
+    '<button type="button" data-eb="save" class="eb-primary" hidden disabled>' + (IS_SITE ? 'Download updated page' : 'Save &amp; publish') + '</button>' +
+    '<button type="button" data-eb="edit" class="eb-primary">Edit page</button>';
+  document.body.appendChild(bar);
+  document.documentElement.classList.add('has-bar');
+  var q = function (k) { return bar.querySelector('[data-eb=' + k + ']'); };
+  if (draft) q('restore').hidden = false;
+  q('edit').onclick = function () { editing = true; paint(); q('edit').hidden = true; q('save').hidden = false; q('cancel').hidden = false; setStatus('Click any text to change it.'); };
+  q('cancel').onclick = function () { S = JSON.parse(STATE_TEXT); editing = false; dirty = false; paint(); q('edit').hidden = false; q('save').hidden = true; q('save').disabled = true; q('cancel').hidden = true; setStatus('Changes discarded.'); };
+  q('restore').onclick = function () { try { S = JSON.parse(draft); } catch (e) { return; } q('restore').hidden = true; q('edit').onclick(); markDirty(); setStatus('Unsaved edits restored. Save to publish them.'); };
+  q('save').onclick = save;
+}
+function save() {
+  var html = buildDoc();
+  if (IS_SITE) {
+    try {
+      var blob = new Blob([html], { type: 'text/html' });
+      var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'index.html';
+      document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+      try { sessionStorage.setItem(DRAFT_KEY, JSON.stringify(S)); } catch (e) {}
+      setStatus('Downloaded index.html. Upload it to GitHub, replacing the old ' + (SITE_PATH || 'index.html') + ', to update your site.');
+    } catch (err) { setStatus('Couldn’t create the file. Try another browser.'); }
+    return;
+  }
+  if (html.length > 15500000) { setStatus('The page is too large to save. Remove an image or two and try again.'); return; }
+  setStatus('Publishing…'); bar.querySelector('[data-eb=save]').disabled = true;
+  try { sessionStorage.setItem(DRAFT_KEY, JSON.stringify(S)); } catch (e) {}
+  art.publish(html).then(function () { setStatus('Published. Reloading…'); }, function (err) {
+    var c = err && err.code; bar.querySelector('[data-eb=save]').disabled = false;
+    if (c === 'conflict') setStatus('A newer version was saved somewhere else. The page will reload to it; use “Restore unsaved edits” to get your changes back.');
+    else if (c === 'not_writer' || c === 'not_granted' || c === 'consent_required' || c === 'capability_disabled' || c === 'not_declared' || c === 'capability_removed') setStatus('This view is read-only, so changes can’t be saved here. Open the page from your own Claude account to edit.');
+    else if (c === 'too_large') setStatus('The page is too large to save. Remove an image or two and try again.');
+    else if (c === 'rate_limited') setStatus('Saved too often in a short time. Wait a minute, then save again.');
+    else setStatus('Couldn’t publish just now. Check your connection and save again.');
+  });
+}
+function buildDoc() {
+  var json = JSON.stringify(S).replace(/</g, '\\u003c');
+  var css = document.getElementById('css').textContent;
+  var js = document.getElementById('app').textContent;
+  var C = '</' + 'script>';
+  if (IS_SITE) return SITE_HEAD + '<style id="css">' + css + '</style>\n</head>\n<body>\n<div id="root"></div>\n<script type="application/json" id="state">' + json + C + '\n<script id="app">' + js + C + '\n</body>\n</html>\n';
+  return '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>' + RESET + '</style></head><body>' +
+    PRE + '<style id="css">' + css + '</style>\n<div id="root"></div>\n<script type="application/json" id="state">' + json + C + '\n<script id="app">' + js + C + '\n</body></html>';
+}
+
+/* ---- boot ---- */
+try { var d = sessionStorage.getItem(DRAFT_KEY); if (d) { if (d === JSON.stringify(S)) sessionStorage.removeItem(DRAFT_KEY); else draft = d; } } catch (e) {}
+paint();
+function siteEdit() { if (IS_SITE && !bar && location.hash === '#edit') { art = {}; showBar(); } }
+if (IS_SITE) { siteEdit(); window.addEventListener('hashchange', siteEdit); }
+(function () {
+  if (IS_SITE || !window.claude || typeof window.claude.use !== 'function') return;
+  Promise.all([window.claude.use('user'), window.claude.use('artifact')]).then(function (r) {
+    var u = r[0], a = r[1];
+    if (!u || !a) return;
+    return Promise.all([u.isOwner(), u.canEdit()]).then(function (ok) {
+      if (ok[0] || ok[1]) { art = a; showBar(); }
+    });
+  }).catch(function () {});
+})();
+</script>
+</body>
+</html>
